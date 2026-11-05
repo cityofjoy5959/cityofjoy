@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Trad:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@source "../**/*.php";
+
+@theme {
+  --color-brand: #FF5454;
+  --color-brand-secondary: #B09CFF;
+  --color-brand-hover: #e04545;
+  --color-brand-secondary-hover: #9b84fa;
+
+  --font-sans: 'Quicksand', 'Google Sans', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-accent: 'Playwrite IT Trad', 'Playwrite Italia Tradizionale', cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: clip;
+    width: 100%;
+    min-width: 320px;
+  }
+
+  img, svg, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Universal Minimal Custom Scrollbar in Brand Color (No Ugly OS Arrows) */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #FF5454 transparent;
+  }
+
+  ::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track,
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb,
+  *::-webkit-scrollbar-thumb {
+    background-color: #FF5454;
+    border-radius: 9999px;
+    transition: background-color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover,
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #e04545;
+  }
+
+  ::-webkit-scrollbar-thumb:active,
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #cc3939;
+  }
+
+  /* Remove ugly default Windows OS scrollbar arrow buttons */
+  ::-webkit-scrollbar-button,
+  *::-webkit-scrollbar-button {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+/* Smooth minimal floating motion for WhatsApp icon */
+@keyframes floatSmooth {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-smooth {
+  animation: floatSmooth 3.2s ease-in-out infinite;
+}
+
+.animate-float-smooth:hover {
+  animation-play-state: paused;
+}
+
+/* Accent styled font utility for titles & delicate highlights */
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* Feature cards icon hover rotation (30 deg left) */
+.card-icon {
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+}
+
+.group:hover .card-icon {
+  transform: rotate(-30deg);
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /router.php
+
+# Sitemap
+Sitemap: https://cityofjoytherapy.com/sitemap.xml
+

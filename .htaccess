@@ -1,0 +1,41 @@
+# .htaccess - Clean & Simple SEO URLs for City of Joy Therapy
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# 1. Canonical Redirect: strip .php extension from URL bar (301 Permanent Redirect)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.php[\s?] [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+aboutpage\.php[\s?] [NC]
+RewriteRule ^aboutpage\.php$ /about [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+service\.php[\s?] [NC]
+RewriteRule ^service\.php$ /services [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+privacypolicypage\.php[\s?] [NC]
+RewriteRule ^privacypolicypage\.php$ /privacy-policy [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+termsandconditionpage\.php[\s?] [NC]
+RewriteRule ^termsandconditionpage\.php$ /terms-and-conditions [R=301,L]
+
+# Redirect trailing slashes for non-directories (e.g. /about/ -> /about)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# 2. Specific Clean URL Routes
+RewriteRule ^about/?$ aboutpage.php [L,QSA]
+RewriteRule ^services/?$ service.php [L,QSA]
+RewriteRule ^service/?$ service.php [L,QSA]
+RewriteRule ^privacy-policy/?$ privacypolicypage.php [L,QSA]
+RewriteRule ^privacypolicy/?$ privacypolicypage.php [L,QSA]
+RewriteRule ^terms-and-conditions/?$ termsandconditionpage.php [L,QSA]
+RewriteRule ^terms/?$ termsandconditionpage.php [L,QSA]
+RewriteRule ^termsandconditions/?$ termsandconditionpage.php [L,QSA]
+
+# 3. Generic Clean URL Rule: match any existing .php file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
