@@ -155,13 +155,13 @@
                 <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mb-4">
                   <button type="button" data-book-service="Deep Tissue Massage" data-book-duration="60" class="py-2.5 px-2 sm:px-3 rounded-xl bg-stone-50 border border-stone-200/70 hover:border-brand/60 hover:bg-rose-50/20 text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="text-xs font-bold text-slate-800 block">Standard</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹799</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹499</span>
                     <span class="text-[11px] font-medium text-slate-500 whitespace-nowrap block">(60 min)</span>
                   </button>
                   <button type="button" data-book-service="Deep Tissue Massage" data-book-duration="90" class="relative py-2.5 px-2 sm:px-3 rounded-xl bg-rose-50/50 border border-brand/20 hover:border-brand text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="absolute -top-2 right-2.5 text-[9px] font-bold uppercase tracking-wider text-white bg-brand px-1.5 py-0.5 rounded-full shadow-2xs">Best Value</span>
                     <span class="text-xs font-bold text-brand block">Extended</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹999</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹699</span>
                     <span class="text-[11px] font-medium text-brand/80 whitespace-nowrap block">(90 min)</span>
                   </button>
                 </div>
@@ -218,13 +218,13 @@
                 <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mb-4">
                   <button type="button" data-book-service="Head &amp; Foot Massage" data-book-duration="60" class="py-2.5 px-2 sm:px-3 rounded-xl bg-stone-50 border border-stone-200/70 hover:border-brand/60 hover:bg-rose-50/20 text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="text-xs font-bold text-slate-800 block">Standard</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹799</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹499</span>
                     <span class="text-[11px] font-medium text-slate-500 whitespace-nowrap block">(60 min)</span>
                   </button>
                   <button type="button" data-book-service="Head &amp; Foot Massage" data-book-duration="90" class="relative py-2.5 px-2 sm:px-3 rounded-xl bg-rose-50/50 border border-brand/20 hover:border-brand text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="absolute -top-2 right-2.5 text-[9px] font-bold uppercase tracking-wider text-white bg-brand px-1.5 py-0.5 rounded-full shadow-2xs">Best Value</span>
                     <span class="text-xs font-bold text-brand block">Extended</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹999</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹699</span>
                     <span class="text-[11px] font-medium text-brand/80 whitespace-nowrap block">(90 min)</span>
                   </button>
                 </div>
@@ -281,13 +281,13 @@
                 <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mb-4">
                   <button type="button" data-book-service="Body Scrubbing" data-book-duration="60" class="py-2.5 px-2 sm:px-3 rounded-xl bg-stone-50 border border-stone-200/70 hover:border-brand/60 hover:bg-rose-50/20 text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="text-xs font-bold text-slate-800 block">Standard</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹799</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹499</span>
                     <span class="text-[11px] font-medium text-slate-500 whitespace-nowrap block">(60 min)</span>
                   </button>
                   <button type="button" data-book-service="Body Scrubbing" data-book-duration="90" class="relative py-2.5 px-2 sm:px-3 rounded-xl bg-rose-50/50 border border-brand/20 hover:border-brand text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="absolute -top-2 right-2.5 text-[9px] font-bold uppercase tracking-wider text-white bg-brand px-1.5 py-0.5 rounded-full shadow-2xs">Best Value</span>
                     <span class="text-xs font-bold text-brand block">Extended</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹999</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹699</span>
                     <span class="text-[11px] font-medium text-brand/80 whitespace-nowrap block">(90 min)</span>
                   </button>
                 </div>
@@ -344,13 +344,13 @@
                 <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mb-4">
                   <button type="button" data-book-service="Men's Wellness Therapy" data-book-duration="60" class="py-2.5 px-2 sm:px-3 rounded-xl bg-stone-50 border border-stone-200/70 hover:border-brand/60 hover:bg-rose-50/20 text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="text-xs font-bold text-slate-800 block">Standard</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹799</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 block my-0.5 leading-tight">₹499</span>
                     <span class="text-[11px] font-medium text-slate-500 whitespace-nowrap block">(60 min)</span>
                   </button>
                   <button type="button" data-book-service="Men's Wellness Therapy" data-book-duration="90" class="relative py-2.5 px-2 sm:px-3 rounded-xl bg-rose-50/50 border border-brand/20 hover:border-brand text-center transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center">
                     <span class="absolute -top-2 right-2.5 text-[9px] font-bold uppercase tracking-wider text-white bg-brand px-1.5 py-0.5 rounded-full shadow-2xs">Best Value</span>
                     <span class="text-xs font-bold text-brand block">Extended</span>
-                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹999</span>
+                    <span class="text-lg sm:text-xl font-extrabold text-brand block my-0.5 leading-tight">₹699</span>
                     <span class="text-[11px] font-medium text-brand/80 whitespace-nowrap block">(90 min)</span>
                   </button>
                 </div>

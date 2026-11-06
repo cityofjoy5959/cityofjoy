@@ -147,7 +147,7 @@
             <span class="text-xs sm:text-sm font-bold text-stone-900">60 Min</span>
             <span class="text-[10px] text-stone-500 bg-stone-100 px-1.5 py-0.5 rounded">Standard</span>
           </div>
-          <div class="text-base sm:text-lg font-bold text-stone-900">₹799</div>
+          <div class="text-base sm:text-lg font-bold text-stone-900">₹499</div>
         </button>
 
         <!-- 90 Min Option -->
@@ -164,7 +164,7 @@
             <span class="text-xs sm:text-sm font-bold text-stone-900">90 Min</span>
             <span class="text-[10px] text-brand bg-brand/10 px-1.5 py-0.5 rounded font-medium">Extended</span>
           </div>
-          <div class="text-base sm:text-lg font-bold text-brand">₹999</div>
+          <div class="text-base sm:text-lg font-bold text-brand">₹699</div>
         </button>
 
       </div>
@@ -330,7 +330,7 @@
         type="button" 
         class="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] group cursor-pointer"
       >
-        <span id="confirm-btn-text">Book on WhatsApp (₹999)</span>
+        <span id="confirm-btn-text">Book on WhatsApp (₹699)</span>
         <span class="group-hover:translate-x-0.5 transition-transform">→</span>
       </button>
 
@@ -395,8 +395,8 @@
   const whatsappNumber = "919830414714";
 
   const packages = {
-    "60": { price: "₹799", label: "60 Minutes Session (Standard)" },
-    "90": { price: "₹999", label: "90 Minutes Session (Extended / Best Value)" }
+    "60": { price: "₹499", label: "60 Minutes Session (Standard)" },
+    "90": { price: "₹699", label: "90 Minutes Session (Extended / Best Value)" }
   };
 
   // Helper: Format Date to YYYY-MM-DD

@@ -59,11 +59,11 @@
           <ul class="space-y-1 font-semibold text-stone-800">
             <li class="flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>
-              <span>60 Minutes Session: ₹799</span>
+              <span>60 Minutes Session: ₹499</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>
-              <span>90 Minutes Session: ₹999</span>
+              <span>90 Minutes Session: ₹699</span>
             </li>
           </ul>
         </div>

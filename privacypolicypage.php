@@ -98,6 +98,7 @@
           </p>
           <div class="bg-stone-100 p-4 rounded-xl text-sm space-y-1 border border-stone-200">
             <p><strong>City of Joy Therapy</strong></p>
+            <p>Email: <a href="mailto:cityofjoy5959@gmail.com" class="text-brand font-semibold hover:underline">cityofjoy5959@gmail.com</a></p>
             <p>WhatsApp / Call: +91 9830414714</p>
             <p>Location: Kolkata, West Bengal, India</p>
           </div>

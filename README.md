@@ -14,3 +14,4 @@ Start the local PHP server using the router:
 php -S localhost:8000 router.php
 ```
 Open `http://localhost:8000` in your browser.
+
