@@ -13,7 +13,7 @@
           <img 
             src="/assets/city_of_joy_therapy_logo_full.png" 
             alt="City of Joy Therapy - Doorstep Male Massage in Kolkata" 
-            class="h-10 sm:h-11 w-auto object-contain hover:scale-105 transition-transform"
+            class="h-14 sm:h-16 w-auto object-contain hover:scale-105 transition-transform"
           />
         </a>
         <p class="text-stone-600 text-xs sm:text-sm max-w-sm leading-relaxed">
