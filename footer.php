@@ -51,18 +51,6 @@
           </svg>
         </a>
 
-        <!-- Minimal Email Support Icon -->
-        <a 
-          href="mailto:cityofjoy5959@gmail.com" 
-          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-stone-200/90 text-stone-600 hover:text-brand hover:border-brand/40 flex items-center justify-center transition-all hover:scale-105 shadow-2xs active:scale-95" 
-          aria-label="Email Support (cityofjoy5959@gmail.com)"
-          title="Email: cityofjoy5959@gmail.com"
-        >
-          <svg class="w-4 h-4 sm:w-4.5 sm:h-4.5 fill-none stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-          </svg>
-        </a>
-
         <!-- Quick WhatsApp Action (Brand Color Button) -->
         <a 
           href="https://wa.me/919830414714?text=Hello%20City%20of%20Joy%20Therapy,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20doorstep%20massage%20session." 
@@ -87,12 +75,7 @@
         <a href="/about" class="hover:text-brand transition-colors">About</a>
       </nav>
 
-      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-stone-500">
-        <a href="mailto:cityofjoy5959@gmail.com" class="hover:text-brand transition-colors font-semibold text-stone-700 inline-flex items-center gap-1.5" title="Support Email">
-          <svg class="w-3.5 h-3.5 text-brand shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-          <span>cityofjoy5959@gmail.com</span>
-        </a>
-        <span>•</span>
+      <div class="flex items-center gap-4 text-xs text-stone-500">
         <span>No Advance Deposit</span>
         <span>•</span>
         <span>Cash / UPI Post-Service</span>
