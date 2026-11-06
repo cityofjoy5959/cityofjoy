@@ -318,7 +318,7 @@
           class="mt-0.5 w-4 h-4 rounded text-brand focus:ring-brand border-stone-300 cursor-pointer accent-[#FF5454] shrink-0"
         />
         <span class="text-xs text-stone-600 leading-snug">
-          I agree to the <a href="/terms-and-conditions" target="_blank" class="text-brand font-semibold underline hover:text-brand-hover">Terms &amp; Conditions</a> and confirm this is a strictly non-sexual therapeutic service.
+          I agree to the <a href="/terms-and-conditions" target="_blank" class="text-brand font-semibold underline hover:text-brand-hover">Terms &amp; Conditions</a> for professional wellness &amp; therapy services.
         </span>
       </label>
     </div>
@@ -773,7 +773,7 @@ I would like to book a doorstep massage session:
 • Preferred Time: ${timeLabel}
 ${locationDetails}
 • Rate: ${pkg.price} (No Advance Payment)
-• Terms Accepted: Yes (Strictly Professional / Non-Sexual)
+• Terms Accepted: Yes (Professional Wellness Therapy)
 
 Please share available therapist profiles and confirm my slot. Thank you!`;
 

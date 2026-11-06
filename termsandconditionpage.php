@@ -47,7 +47,7 @@
         <section class="space-y-3">
           <h2 class="text-xl font-bold text-stone-900 border-l-4 border-[#B09CFF] pl-3">2. Strictly Professional Therapeutic Care</h2>
           <p>
-            All massage and bodywork services provided by City of Joy Therapy are strictly therapeutic, non-medical, and non-sexual in nature. 
+            All massage and bodywork services provided by City of Joy Therapy are strictly therapeutic and non-medical in nature, focused exclusively on holistic relaxation, stress relief, and muscular wellness.
           </p>
           <ul class="list-disc pl-5 space-y-2">
             <li>Any inappropriate remarks, suggestive behavior, or misconduct will lead to immediate termination of the treatment without refund.</li>
