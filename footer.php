@@ -158,7 +158,7 @@
     animation-play-state: paused;
   }
 </style>
-<div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center group animate-float-smooth">
+<div class="fixed bottom-8 right-5 sm:bottom-10 sm:right-7 z-40 flex items-center group animate-float-smooth">
   <!-- Subtle Hover Pill Tooltip (Desktop Only) -->
   <span class="hidden lg:inline-block mr-2.5 px-3 py-1.5 rounded-full bg-stone-900/90 text-white text-xs font-semibold shadow-lg backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none translate-x-2 group-hover:translate-x-0">
     Book Your Session
