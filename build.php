@@ -99,3 +99,4 @@ if (file_exists(__DIR__ . '/robots.txt')) {
 }
 
 echo "Static site build complete in /public folder!\n";
+

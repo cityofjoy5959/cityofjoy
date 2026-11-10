@@ -56,14 +56,14 @@
         </summary>
         <div class="mt-4 text-sm text-stone-600 leading-relaxed border-t border-stone-100 pt-3 space-y-2">
           <p>Our prices are strictly fixed with no hidden fees:</p>
-          <ul class="space-y-1 font-semibold text-stone-800">
+          <ul class="space-y-1.5 font-semibold text-stone-800">
             <li class="flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>
-              <span>60 Minutes Session: ₹499</span>
+              <span>Head &amp; Foot Massage: ₹499 (60 min) • ₹699 (90 min)</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>
-              <span>90 Minutes Session: ₹699</span>
+              <span>Body Therapies (Deep Tissue, Scrubbing, Wellness): ₹799 (60 min) • ₹999 (90 min)</span>
             </li>
           </ul>
         </div>

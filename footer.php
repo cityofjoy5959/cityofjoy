@@ -160,4 +160,4 @@
 </div>
 
 <!-- Universal Booking Package Selection & WhatsApp Modal -->
-<?php include_once 'booking_modal.php'; ?>
+<?php include 'booking_modal.php'; ?>

@@ -36,7 +36,7 @@ function render_seo_tags($page = 'home', $custom = []) {
         ],
         'services' => [
             'title' => 'Male Massage Services & Rates Kolkata | Deep Tissue, Reflexology, Body Scrub',
-            'description' => 'Explore our male massage therapies in Kolkata: Deep Tissue, Head & Foot Reflexology, Body Scrubbing, and Men\'s Wellness Therapy. Fixed rates: ₹499 (60m) & ₹699 (90m).',
+            'description' => 'Explore our male massage therapies in Kolkata: Head & Foot Reflexology (₹499/₹699), Deep Tissue, Body Scrubbing, and Men\'s Wellness Therapy (₹799/₹999).',
             'keywords' => 'male massage price kolkata, deep tissue massage kolkata, male body scrub kolkata, reflexology massage kolkata, doorstep massage rates kolkata, hotel spa service rates kolkata',
             'canonical' => $baseUrl . '/services',
             'og_type' => 'website',
@@ -128,7 +128,7 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
             'description' => 'Premier doorstep and hotel male massage therapy and body scrub sanctuary in Kolkata. Certified male therapists, natural botanical oils, and 100% discretion.',
             'telephone' => '+919830414714',
             'email' => 'cityofjoy5959@gmail.com',
-            'priceRange' => '₹499 - ₹699',
+            'priceRange' => '₹499 - ₹999',
             'currenciesAccepted' => 'INR',
             'paymentAccepted' => 'Cash, UPI, Online',
             'address' => [
@@ -173,7 +173,7 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                             'name' => 'Deep Tissue Massage (60 min)',
                             'description' => 'Targeted deep pressure therapy engineered to relieve severe muscle tension, back knots, and physical fatigue.'
                         ],
-                        'price' => '499',
+                        'price' => '799',
                         'priceCurrency' => 'INR'
                     ],
                     [
@@ -183,7 +183,7 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                             'name' => 'Deep Tissue Massage (90 min)',
                             'description' => 'Extended deep muscle recovery and tension release with therapeutic warm essential oils.'
                         ],
-                        'price' => '699',
+                        'price' => '999',
                         'priceCurrency' => 'INR'
                     ],
                     [
@@ -203,7 +203,7 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                             'name' => 'Rejuvenating Body Scrubbing (60 min)',
                             'description' => 'Full-body exfoliation removing dead skin cells and restoring smooth vitality.'
                         ],
-                        'price' => '499',
+                        'price' => '799',
                         'priceCurrency' => 'INR'
                     ],
                     [
@@ -213,7 +213,7 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                             'name' => 'Men\'s Full Body Relaxation Therapy (60 min)',
                             'description' => 'Full-body Swedish and aromatherapy fusion designed for complete peace of mind.'
                         ],
-                        'price' => '499',
+                        'price' => '799',
                         'priceCurrency' => 'INR'
                     ]
                 ]
@@ -259,7 +259,7 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                     'name' => 'What are the exact rates for doorstep massage?',
                     'acceptedAnswer' => [
                         '@type' => 'Answer',
-                        'text' => 'Our prices are strictly fixed with no hidden fees: 60 Minutes Session is ₹499, and 90 Minutes Session is ₹699.'
+                        'text' => 'Our prices are strictly fixed with no hidden fees: Head & Foot Reflexology is ₹499 (60m) / ₹699 (90m), and Full Body Therapies (Deep Tissue, Body Scrubbing, Men\'s Wellness) are ₹799 (60m) / ₹999 (90m).'
                     ]
                 ],
                 [
@@ -369,8 +369,8 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                     ],
                     'areaServed' => 'Kolkata, West Bengal',
                     'offers' => [
-                        ['@type' => 'Offer', 'name' => 'Standard (60 min)', 'price' => '499', 'priceCurrency' => 'INR'],
-                        ['@type' => 'Offer', 'name' => 'Extended (90 min)', 'price' => '699', 'priceCurrency' => 'INR']
+                        ['@type' => 'Offer', 'name' => 'Standard (60 min)', 'price' => '799', 'priceCurrency' => 'INR'],
+                        ['@type' => 'Offer', 'name' => 'Extended (90 min)', 'price' => '999', 'priceCurrency' => 'INR']
                     ]
                 ],
                 [
@@ -397,8 +397,8 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                     ],
                     'areaServed' => 'Kolkata, West Bengal',
                     'offers' => [
-                        ['@type' => 'Offer', 'name' => 'Standard (60 min)', 'price' => '499', 'priceCurrency' => 'INR'],
-                        ['@type' => 'Offer', 'name' => 'Extended (90 min)', 'price' => '699', 'priceCurrency' => 'INR']
+                        ['@type' => 'Offer', 'name' => 'Standard (60 min)', 'price' => '799', 'priceCurrency' => 'INR'],
+                        ['@type' => 'Offer', 'name' => 'Extended (90 min)', 'price' => '999', 'priceCurrency' => 'INR']
                     ]
                 ],
                 [
@@ -411,8 +411,8 @@ function render_json_ld_schemas($schemas, $baseUrl, $cfg) {
                     ],
                     'areaServed' => 'Kolkata, West Bengal',
                     'offers' => [
-                        ['@type' => 'Offer', 'name' => 'Standard (60 min)', 'price' => '499', 'priceCurrency' => 'INR'],
-                        ['@type' => 'Offer', 'name' => 'Extended (90 min)', 'price' => '699', 'priceCurrency' => 'INR']
+                        ['@type' => 'Offer', 'name' => 'Standard (60 min)', 'price' => '799', 'priceCurrency' => 'INR'],
+                        ['@type' => 'Offer', 'name' => 'Extended (90 min)', 'price' => '999', 'priceCurrency' => 'INR']
                     ]
                 ]
             ]

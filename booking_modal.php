@@ -35,6 +35,20 @@
   .input-error-shake {
     animation: gentleShake 0.35s ease-in-out;
   }
+
+  /* Clean Minimal 12-Hour Time Picker (Removes bulky browser dropdown arrows) */
+  #select-time-hour,
+  #select-time-minute {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    text-align-last: center;
+  }
+  #select-time-hour::-ms-expand,
+  #select-time-minute::-ms-expand {
+    display: none;
+  }
 </style>
 <div 
   id="booking-modal" 
@@ -147,7 +161,7 @@
             <span class="text-xs sm:text-sm font-bold text-stone-900">60 Min</span>
             <span class="text-[10px] text-stone-500 bg-stone-100 px-1.5 py-0.5 rounded">Standard</span>
           </div>
-          <div class="text-base sm:text-lg font-bold text-stone-900">₹499</div>
+          <div id="duration-price-60" class="text-base sm:text-lg font-bold text-stone-900">₹799</div>
         </button>
 
         <!-- 90 Min Option -->
@@ -164,50 +178,113 @@
             <span class="text-xs sm:text-sm font-bold text-stone-900">90 Min</span>
             <span class="text-[10px] text-brand bg-brand/10 px-1.5 py-0.5 rounded font-medium">Extended</span>
           </div>
-          <div class="text-base sm:text-lg font-bold text-brand">₹699</div>
+          <div id="duration-price-90" class="text-base sm:text-lg font-bold text-brand">₹999</div>
         </button>
 
       </div>
     </div>
 
-    <!-- 3. Older Setup for Date & Preferred Time (BEFORE Location) -->
+    <!-- 3. Preferred Date & Time (Minimal 12-Hour Setup Clock) -->
     <div>
       <div class="flex items-center justify-between mb-1">
         <span class="block text-xs font-semibold text-stone-600">
           Preferred Date &amp; Time
         </span>
-        <!-- Perfectly Contrasted 'Now' Action Button -->
+        <!-- Minimal 'Now' Action Button -->
         <button 
           type="button" 
           id="btn-quick-now" 
           style="background-color: #fff1f2; color: #FF5454; border: 1px solid rgba(255, 84, 84, 0.35);"
-          class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold shadow-2xs transition-all cursor-pointer active:scale-95"
+          class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold shadow-2xs transition-all cursor-pointer active:scale-95 shrink-0"
         >
-          <span id="quick-now-btn-label">Book for Now (+60 min)</span>
+          <span id="quick-now-btn-label">Now</span>
         </button>
       </div>
 
       <div class="grid grid-cols-2 gap-2">
+        <!-- Date Input -->
         <div>
           <input 
             type="date" 
             id="input-booking-date" 
-            class="w-full px-3 py-2 rounded-xl border border-stone-200 focus:border-brand focus:ring-1 focus:ring-brand text-xs sm:text-sm bg-white text-stone-800 transition-all font-medium cursor-pointer"
+            class="w-full h-10 px-3 rounded-xl border border-stone-200 hover:border-stone-300 focus:border-brand/60 focus:ring-2 focus:ring-brand/10 text-xs sm:text-sm bg-white text-stone-800 transition-all font-semibold cursor-pointer"
             required
           />
         </div>
+
+        <!-- Minimal 12-Hour Clock Selector -->
         <div>
-          <input 
-            type="time" 
-            id="input-booking-time" 
-            class="w-full px-3 py-2 rounded-xl border border-stone-200 focus:border-brand focus:ring-1 focus:ring-brand text-xs sm:text-sm bg-white text-stone-800 transition-all font-medium cursor-pointer"
-            required
-          />
+          <div class="flex items-center justify-between h-10 px-2 sm:px-2.5 rounded-xl border border-stone-200 bg-white hover:border-stone-300 focus-within:border-brand/60 focus-within:ring-2 focus-within:ring-brand/10 transition-all">
+            <!-- Hour & Minute Tile Box -->
+            <div class="flex items-center gap-1 font-bold text-xs sm:text-sm text-stone-900">
+              <select 
+                id="select-time-hour" 
+                aria-label="Hour"
+                class="bg-stone-100/90 hover:bg-stone-200/80 text-stone-900 font-bold text-xs sm:text-sm w-9 py-1 rounded-md text-center cursor-pointer focus:outline-none focus:ring-1 focus:ring-brand transition-colors"
+              >
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+
+              <span class="text-stone-300 font-extrabold select-none text-xs sm:text-sm">:</span>
+
+              <select 
+                id="select-time-minute" 
+                aria-label="Minute"
+                class="bg-stone-100/90 hover:bg-stone-200/80 text-stone-900 font-bold text-xs sm:text-sm w-9 py-1 rounded-md text-center cursor-pointer focus:outline-none focus:ring-1 focus:ring-brand transition-colors"
+              >
+                <option value="00">00</option>
+                <option value="05">05</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+              </select>
+            </div>
+
+            <!-- AM / PM Compact Pill Toggle -->
+            <div class="inline-flex items-center p-0.5 rounded-lg bg-stone-100 shrink-0">
+              <button 
+                type="button" 
+                id="btn-period-am" 
+                class="px-2.5 py-0.5 rounded-md text-xs font-bold transition-all cursor-pointer text-stone-500 hover:text-stone-800"
+              >
+                AM
+              </button>
+              <button 
+                type="button" 
+                id="btn-period-pm" 
+                class="px-2.5 py-0.5 rounded-md text-xs font-bold transition-all cursor-pointer bg-brand text-white shadow-2xs"
+              >
+                PM
+              </button>
+            </div>
+          </div>
+
+          <input type="hidden" id="input-booking-time" value="" />
         </div>
       </div>
 
-      <p class="text-[11px] text-stone-400 mt-1 leading-tight">
-        'Now' schedules therapist arrival 60 minutes from booking for travel &amp; setup.
+      <!-- Minimal 'Now' Arrival Note -->
+      <p class="text-[11px] text-stone-500 mt-1.5 leading-tight flex items-center gap-1.5 font-medium">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>
+        <span><strong>'Now'</strong> means therapist arrives at your doorstep within ~60 mins.</span>
       </p>
     </div>
 
@@ -330,7 +407,7 @@
         type="button" 
         class="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] group cursor-pointer"
       >
-        <span id="confirm-btn-text">Book on WhatsApp (₹699)</span>
+        <span id="confirm-btn-text">Book on WhatsApp (₹999)</span>
         <span class="group-hover:translate-x-0.5 transition-transform">→</span>
       </button>
 
@@ -372,9 +449,15 @@
   const hotelDetailBox = document.getElementById('hotel-detail-box');
   const inputHomeAddress = document.getElementById('input-home-address');
 
-  // Date, Time & Now Button (Older Setup)
+  // Date, Time & Now Button (12-Hour Setup Clock & Indian Standard Time)
   const inputBookingDate = document.getElementById('input-booking-date');
   const inputBookingTime = document.getElementById('input-booking-time');
+  const selectTimeHour = document.getElementById('select-time-hour');
+  const selectTimeMinute = document.getElementById('select-time-minute');
+  const btnPeriodAM = document.getElementById('btn-period-am');
+  const btnPeriodPM = document.getElementById('btn-period-pm');
+  let currentPeriod = 'PM';
+
   const btnQuickNow = document.getElementById('btn-quick-now');
   const quickNowBtnLabel = document.getElementById('quick-now-btn-label');
   const termsCheckbox = document.getElementById('terms-agree-checkbox');
@@ -387,6 +470,9 @@
   const selectedHotelValue = document.getElementById('selected-hotel-value');
   const customHotelItems = document.querySelectorAll('.custom-hotel-item');
 
+  const durationPrice60 = document.getElementById('duration-price-60');
+  const durationPrice90 = document.getElementById('duration-price-90');
+
   let currentService = "Deep Tissue Massage";
   let currentDuration = "90";
   let currentLocation = "Home"; // "Home" or "Hotel"
@@ -394,10 +480,34 @@
   let isNowBooking = false;
   const whatsappNumber = "919830414714";
 
-  const packages = {
-    "60": { price: "₹499", label: "60 Minutes Session (Standard)" },
-    "90": { price: "₹699", label: "90 Minutes Session (Extended / Best Value)" }
-  };
+  // Check if selected therapy is Head and Foot
+  function isHeadAndFootService(serviceName) {
+    const s = (serviceName || "").toLowerCase();
+    return s.includes('head') && s.includes('foot');
+  }
+
+  // Dynamic package pricing: Head & Foot = ₹499 (60m) / ₹699 (90m); All other services = ₹799 (60m) / ₹999 (90m)
+  function getPackageInfo(serviceName, duration) {
+    const isHeadFoot = isHeadAndFootService(serviceName);
+    if (duration === "60") {
+      const price = isHeadFoot ? "₹499" : "₹799";
+      return { price: price, label: `60 Minutes Session (Standard - ${price})` };
+    } else {
+      const price = isHeadFoot ? "₹699" : "₹999";
+      return { price: price, label: `90 Minutes Session (Extended - ${price})` };
+    }
+  }
+
+  // Get Date in Indian Standard Time (Asia/Kolkata, UTC+05:30)
+  function getISTDate(baseDate = new Date()) {
+    try {
+      const istStr = baseDate.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
+      return new Date(istStr);
+    } catch (e) {
+      const utcMs = baseDate.getTime() + (baseDate.getTimezoneOffset() * 60000);
+      return new Date(utcMs + (5.5 * 3600000));
+    }
+  }
 
   // Helper: Format Date to YYYY-MM-DD
   function formatDateYYYYMMDD(d) {
@@ -407,11 +517,29 @@
     return `${year}-${month}-${day}`;
   }
 
-  // Helper: Format Time to HH:MM (24-hour)
-  function formatTimeHHMM(d) {
-    const hours = String(d.getHours()).padStart(2, '0');
-    const minutes = String(d.getMinutes()).padStart(2, '0');
-    return `${hours}:${minutes}`;
+  // Convert 12h components into 24-hr "HH:MM"
+  function get24HourTime(hour12, minute, period) {
+    let h = parseInt(hour12, 10);
+    if (period === 'PM' && h < 12) h += 12;
+    if (period === 'AM' && h === 12) h = 0;
+    return `${String(h).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+  }
+
+  // Decompose Date object into 12-hour components (Hour 01-12, Minute 00-55 rounded to 5m, Period AM/PM)
+  function get12HourComponents(dateObj) {
+    let h24 = dateObj.getHours();
+    let m = Math.round(dateObj.getMinutes() / 5) * 5;
+    if (m >= 60) {
+      m = 0;
+      h24 = (h24 + 1) % 24;
+    }
+    const period = h24 >= 12 ? 'PM' : 'AM';
+    const h12 = h24 % 12 || 12;
+    return {
+      hour: String(h12).padStart(2, '0'),
+      minute: String(m).padStart(2, '0'),
+      period: period
+    };
   }
 
   // Helper: Format Date to Readable String (e.g. Thu, 5 Nov 2026)
@@ -437,13 +565,44 @@
     const m = parts[1];
     const period = h >= 12 ? 'PM' : 'AM';
     const h12 = h % 12 || 12;
-    return `${h12}:${m} ${period}`;
+    const h12Str = String(h12).padStart(2, '0');
+    return `${h12Str}:${m} ${period}`;
   }
 
-  // Set minimum date to today
+  // Set AM / PM visual toggle and sync
+  function setPeriod(period) {
+    currentPeriod = (period === 'AM') ? 'AM' : 'PM';
+    if (btnPeriodAM && btnPeriodPM) {
+      if (currentPeriod === 'AM') {
+        btnPeriodAM.className = 'px-2.5 py-0.5 rounded-md text-xs font-bold transition-all cursor-pointer bg-brand text-white shadow-2xs';
+        btnPeriodPM.className = 'px-2.5 py-0.5 rounded-md text-xs font-bold transition-all cursor-pointer text-stone-500 hover:text-stone-800';
+      } else {
+        btnPeriodPM.className = 'px-2.5 py-0.5 rounded-md text-xs font-bold transition-all cursor-pointer bg-brand text-white shadow-2xs';
+        btnPeriodAM.className = 'px-2.5 py-0.5 rounded-md text-xs font-bold transition-all cursor-pointer text-stone-500 hover:text-stone-800';
+      }
+    }
+    syncTimeInput();
+  }
+
+  // Synchronize 12-hour clock dropdowns and period into inputBookingTime
+  function syncTimeInput() {
+    if (!selectTimeHour || !selectTimeMinute) return;
+    const h = selectTimeHour.value;
+    const m = selectTimeMinute.value;
+    inputBookingTime.value = get24HourTime(h, m, currentPeriod);
+  }
+
+  // Set 12h clock dropdowns and period
+  function setTimeSelection(hour, minute, period) {
+    if (selectTimeHour) selectTimeHour.value = String(hour).padStart(2, '0');
+    if (selectTimeMinute) selectTimeMinute.value = String(minute).padStart(2, '0');
+    setPeriod(period);
+  }
+
+  // Set minimum date to today in Indian Standard Time (IST)
   function setDateMinToday() {
-    const today = new Date();
-    inputBookingDate.min = formatDateYYYYMMDD(today);
+    const istToday = getISTDate();
+    inputBookingDate.min = formatDateYYYYMMDD(istToday);
   }
 
   // Set 'Now' button styling with 100% guaranteed high contrast
@@ -457,18 +616,21 @@
       btnQuickNow.style.backgroundColor = '#fff1f2';
       btnQuickNow.style.color = '#FF5454';
       btnQuickNow.style.borderColor = 'rgba(255, 84, 84, 0.35)';
-      quickNowBtnLabel.textContent = "Book for Now (+60 min)";
+      quickNowBtnLabel.textContent = "Now";
     }
   }
 
-  // Trigger 'Now (+60 Mins)'
+  // Trigger 'Now' (Sets current time in Indian Standard Time)
   function applyNowBooking() {
-    const targetTime = new Date(Date.now() + 60 * 60 * 1000);
-    inputBookingDate.value = formatDateYYYYMMDD(targetTime);
-    inputBookingTime.value = formatTimeHHMM(targetTime);
+    const istNow = getISTDate();
+
+    inputBookingDate.value = formatDateYYYYMMDD(istNow);
+
+    const comp = get12HourComponents(istNow);
+    setTimeSelection(comp.hour, comp.minute, comp.period);
     isNowBooking = true;
 
-    setNowVisual(true, formatTime12h(inputBookingTime.value));
+    setNowVisual(true, `${comp.hour}:${comp.minute} ${comp.period}`);
     validationHint.classList.add('hidden');
   }
 
@@ -598,9 +760,14 @@
       homeDetailBox.classList.remove('hidden');
     }
 
-    // 4. Update CTA Button text
-    const pkg = packages[currentDuration];
-    confirmBtnText.textContent = `Book on WhatsApp (${pkg.price})`;
+    // 4. Update Duration prices & CTA Button text based on currentService
+    const pkg60 = getPackageInfo(currentService, "60");
+    const pkg90 = getPackageInfo(currentService, "90");
+    if (durationPrice60) durationPrice60.textContent = pkg60.price;
+    if (durationPrice90) durationPrice90.textContent = pkg90.price;
+
+    const currentPkg = (currentDuration === "60") ? pkg60 : pkg90;
+    confirmBtnText.textContent = `Book on WhatsApp (${currentPkg.price})`;
   }
 
   // Open Modal function
@@ -608,7 +775,7 @@
     isDirectServiceMode = Boolean(directCard);
     
     if (serviceTitle && serviceTitle.trim()) {
-      currentService = serviceTitle.trim();
+      currentService = serviceTitle.trim().replace(/&amp;/g, '&');
     } else {
       currentService = "Deep Tissue Massage";
     }
@@ -679,10 +846,37 @@
     validationHint.classList.add('hidden');
   });
 
-  inputBookingTime.addEventListener('change', function() {
-    resetNowVisual();
-    validationHint.classList.add('hidden');
-  });
+  if (selectTimeHour) {
+    selectTimeHour.addEventListener('change', function() {
+      resetNowVisual();
+      syncTimeInput();
+      validationHint.classList.add('hidden');
+    });
+  }
+
+  if (selectTimeMinute) {
+    selectTimeMinute.addEventListener('change', function() {
+      resetNowVisual();
+      syncTimeInput();
+      validationHint.classList.add('hidden');
+    });
+  }
+
+  if (btnPeriodAM) {
+    btnPeriodAM.addEventListener('click', function() {
+      setPeriod('AM');
+      resetNowVisual();
+      validationHint.classList.add('hidden');
+    });
+  }
+
+  if (btnPeriodPM) {
+    btnPeriodPM.addEventListener('click', function() {
+      setPeriod('PM');
+      resetNowVisual();
+      validationHint.classList.add('hidden');
+    });
+  }
 
   inputHomeAddress.addEventListener('input', function() {
     this.classList.remove('border-rose-400', 'ring-2', 'ring-rose-200');
@@ -747,7 +941,7 @@
     }
 
     // All valid -> proceed to WhatsApp!
-    const pkg = packages[currentDuration];
+    const pkg = getPackageInfo(currentService, currentDuration);
     let locationDetails = "";
 
     if (currentLocation === "Hotel") {
@@ -760,7 +954,7 @@
 
     const readableDate = formatDateReadable(inputBookingDate.value);
     const readableTime = formatTime12h(inputBookingTime.value);
-    const timeLabel = isNowBooking ? `${readableTime} (Now - within ~60 mins arrival)` : readableTime;
+    const timeLabel = isNowBooking ? `${readableTime} (Now - arrival within ~60 mins)` : readableTime;
 
     // Draft clean structured WhatsApp message
     const message = 
@@ -806,6 +1000,7 @@ Please share available therapist profiles and confirm my slot. Thank you!`;
 
   // Initialize
   setDateMinToday();
+  applyNowBooking();
   updateModalUI();
 
 })();
