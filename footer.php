@@ -161,3 +161,120 @@
 
 <!-- Universal Booking Package Selection & WhatsApp Modal -->
 <?php include 'booking_modal.php'; ?>
+
+<!-- Universal Smooth Scroll & Scroll Reveal Controller -->
+<script>
+(function() {
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1. Smooth Anchor Link Scrolling with Fixed Header Offset
+  document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href*="#"]');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href || href === '#' || href === '#!') return;
+
+    const hashIndex = href.indexOf('#');
+    if (hashIndex === -1) return;
+
+    const targetId = href.substring(hashIndex + 1);
+    if (!targetId) return;
+
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    const pathPart = href.substring(0, hashIndex);
+    const isSamePath = !pathPart || pathPart === window.location.pathname || (pathPart === '/' && window.location.pathname === '/');
+    if (isSamePath) {
+      e.preventDefault();
+      const headerEl = document.querySelector('header');
+      const navOffset = headerEl ? headerEl.offsetHeight : 70;
+      const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - navOffset - 12;
+
+      window.scrollTo({
+        top: Math.max(0, targetPos),
+        behavior: 'smooth'
+      });
+
+      if (history.pushState) {
+        history.pushState(null, null, '#' + targetId);
+      }
+    }
+  });
+
+  // Skip reveal animations if user prefers reduced motion
+  if (prefersReducedMotion) return;
+
+  // 2. Performance-Tuned Intersection Observer for Scroll Animations
+  function initScrollReveal() {
+    const candidateSelectors = [
+      'main > section',
+      'main section .grid > div',
+      '.faq-item',
+      '.testimonial-card',
+      '#services .grid > div',
+      '#testimonials .grid > div',
+      '.scroll-reveal'
+    ];
+
+    const observedSet = new Set();
+    candidateSelectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach(el => {
+        if (!el.closest('#booking-modal') && 
+            !el.closest('header') && 
+            !el.closest('#mobile-drawer') && 
+            !el.closest('#preloader') && 
+            el.offsetHeight > 40) {
+          observedSet.add(el);
+        }
+      });
+    });
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '0px 0px -30px 0px',
+        threshold: 0.05
+      });
+
+      observedSet.forEach(el => {
+        if (!el.classList.contains('scroll-reveal-scale')) {
+          el.classList.add('scroll-reveal');
+        }
+
+        const parent = el.parentElement;
+        if (parent && parent.classList.contains('grid')) {
+          const siblings = Array.from(parent.children);
+          const idx = siblings.indexOf(el);
+          if (idx >= 0 && idx < 4) {
+            el.style.transitionDelay = `${(idx % 4) * 100}ms`;
+          }
+        }
+
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('is-visible');
+        } else {
+          observer.observe(el);
+        }
+      });
+    } else {
+      observedSet.forEach(el => el.classList.add('is-visible'));
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollReveal);
+  } else {
+    initScrollReveal();
+  }
+})();
+</script>

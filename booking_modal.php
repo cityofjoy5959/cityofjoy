@@ -36,14 +36,12 @@
     animation: gentleShake 0.35s ease-in-out;
   }
 
-  /* Clean Minimal 12-Hour Time Picker (Removes bulky browser dropdown arrows) */
+  /* Clean Minimal 12-Hour Time Picker */
   #select-time-hour,
   #select-time-minute {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    text-align: center;
-    text-align-last: center;
   }
   #select-time-hour::-ms-expand,
   #select-time-minute::-ms-expand {
@@ -214,48 +212,60 @@
 
         <!-- Minimal 12-Hour Clock Selector -->
         <div>
-          <div class="flex items-center justify-between h-10 px-2 sm:px-2.5 rounded-xl border border-stone-200 bg-white hover:border-stone-300 focus-within:border-brand/60 focus-within:ring-2 focus-within:ring-brand/10 transition-all">
+          <div class="flex items-center justify-between h-10 px-2.5 sm:px-3 rounded-xl border border-stone-200 bg-white hover:border-stone-300 focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/10 transition-all">
             <!-- Hour & Minute Tile Box -->
             <div class="flex items-center gap-1 font-bold text-xs sm:text-sm text-stone-900">
-              <select 
-                id="select-time-hour" 
-                aria-label="Hour"
-                class="bg-stone-100/90 hover:bg-stone-200/80 text-stone-900 font-bold text-xs sm:text-sm w-9 py-1 rounded-md text-center cursor-pointer focus:outline-none focus:ring-1 focus:ring-brand transition-colors"
-              >
-                <option value="01">01</option>
-                <option value="02">02</option>
-                <option value="03">03</option>
-                <option value="04">04</option>
-                <option value="05">05</option>
-                <option value="06">06</option>
-                <option value="07">07</option>
-                <option value="08">08</option>
-                <option value="09">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-              </select>
+              <!-- Hour with subtle down chevron -->
+              <div class="relative inline-flex items-center">
+                <select 
+                  id="select-time-hour" 
+                  aria-label="Hour"
+                  class="appearance-none bg-transparent pr-4 pl-0.5 font-bold text-xs sm:text-sm text-stone-900 cursor-pointer focus:outline-none"
+                >
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <svg class="w-2.5 h-2.5 text-stone-800 absolute right-0.5 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
 
-              <span class="text-stone-300 font-extrabold select-none text-xs sm:text-sm">:</span>
+              <span class="text-stone-300 font-bold select-none text-xs sm:text-sm px-0.5">:</span>
 
-              <select 
-                id="select-time-minute" 
-                aria-label="Minute"
-                class="bg-stone-100/90 hover:bg-stone-200/80 text-stone-900 font-bold text-xs sm:text-sm w-9 py-1 rounded-md text-center cursor-pointer focus:outline-none focus:ring-1 focus:ring-brand transition-colors"
-              >
-                <option value="00">00</option>
-                <option value="05">05</option>
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-                <option value="30">30</option>
-                <option value="35">35</option>
-                <option value="40">40</option>
-                <option value="45">45</option>
-                <option value="50">50</option>
-                <option value="55">55</option>
-              </select>
+              <!-- Minute with subtle down chevron -->
+              <div class="relative inline-flex items-center">
+                <select 
+                  id="select-time-minute" 
+                  aria-label="Minute"
+                  class="appearance-none bg-transparent pr-4 pl-0.5 font-bold text-xs sm:text-sm text-stone-900 cursor-pointer focus:outline-none"
+                >
+                  <option value="00">00</option>
+                  <option value="05">05</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <svg class="w-2.5 h-2.5 text-stone-800 absolute right-0.5 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </div>
 
             <!-- AM / PM Compact Pill Toggle -->
