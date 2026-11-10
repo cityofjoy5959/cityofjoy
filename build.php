@@ -98,5 +98,15 @@ if (file_exists(__DIR__ . '/robots.txt')) {
     echo "  [OK] Copied robots.txt\n";
 }
 
+// 4. Google Site Verification files
+$googleFiles = glob(__DIR__ . '/google*.html');
+if (!empty($googleFiles)) {
+    foreach ($googleFiles as $gFile) {
+        $baseGFile = basename($gFile);
+        copy($gFile, $distDir . '/' . $baseGFile);
+        echo "  [OK] Copied {$baseGFile}\n";
+    }
+}
+
 echo "Static site build complete in /public folder!\n";
 

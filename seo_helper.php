@@ -75,6 +75,7 @@ function render_seo_tags($page = 'home', $custom = []) {
     echo "  <meta name=\"keywords\" content=\"" . htmlspecialchars($cfg['keywords'], ENT_QUOTES, 'UTF-8') . "\">\n";
     echo "  <meta name=\"author\" content=\"City of Joy Therapy\">\n";
     echo "  <meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1\">\n";
+    echo "  <meta name=\"google-site-verification\" content=\"googlec579eeb83264d218\">\n";
     echo "  <link rel=\"canonical\" href=\"" . htmlspecialchars($cfg['canonical'], ENT_QUOTES, 'UTF-8') . "\">\n";
 
     // Local SEO & Geo Meta Tags for Kolkata
