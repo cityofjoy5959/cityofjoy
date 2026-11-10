@@ -44,33 +44,9 @@
         </p>
 
         <!-- Paragraph Description -->
-        <p class="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto mb-4 sm:mb-6">
+        <p class="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto">
           Polite, trained male therapists arrive discretely at your home or hotel room anywhere in Kolkata with fresh linens, organic oils, and complete professional care.
         </p>
-
-        <!-- Minimal Transparent Pricing Pill -->
-        <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 p-2.5 sm:py-2 sm:px-5 rounded-2xl sm:rounded-full bg-white border border-stone-200 shadow-xs text-xs sm:text-sm">
-          <!-- Pricing Tags Group -->
-          <div class="flex items-center gap-1.5 sm:gap-4 font-semibold text-stone-800">
-            <span class="inline-flex items-center gap-1 bg-stone-50 sm:bg-transparent px-2.5 py-1 sm:p-0 rounded-lg sm:rounded-none border border-stone-200/60 sm:border-0 text-xs sm:text-sm">
-              Head &amp; Foot: <span class="text-brand font-bold">₹499 / ₹699</span>
-            </span>
-            <span class="text-stone-300 hidden sm:inline">•</span>
-            <span class="inline-flex items-center gap-1 bg-stone-50 sm:bg-transparent px-2.5 py-1 sm:p-0 rounded-lg sm:rounded-none border border-stone-200/60 sm:border-0 text-xs sm:text-sm">
-              Body Therapies: <span class="text-brand font-bold">₹799 / ₹999</span>
-            </span>
-          </div>
-
-          <span class="text-stone-300 hidden sm:inline">•</span>
-
-          <!-- Trust Badge -->
-          <div class="inline-flex items-center gap-1 text-[11px] sm:text-xs font-semibold text-emerald-700 bg-emerald-50 sm:bg-transparent px-2.5 py-0.5 sm:p-0 rounded-full">
-            <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-            </svg>
-            <span>Pay Post-Service • No Advance</span>
-          </div>
-        </div>
       </div>
     </section>
 
