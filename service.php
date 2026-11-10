@@ -26,31 +26,50 @@
   <main class="flex-grow">
 
     <!-- Minimal Heading Section -->
-    <section class="py-12 sm:py-16 bg-gradient-to-b from-stone-100 via-rose-50/20 to-stone-50 border-b border-stone-200">
+    <section class="py-8 sm:py-16 bg-gradient-to-b from-stone-100 via-rose-50/20 to-stone-50 border-b border-stone-200">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="inline-block text-xs uppercase tracking-widest text-brand font-bold bg-rose-50 border border-brand/20 px-3.5 py-1.5 rounded-full mb-3">
+        <!-- Top Badge -->
+        <span class="inline-block text-[11px] sm:text-xs uppercase tracking-wider text-brand font-bold bg-rose-50 border border-brand/20 px-3 py-1 rounded-full mb-2.5 shadow-2xs">
           Doorstep &amp; Hotel Service Across Kolkata
         </span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-tight">
+
+        <!-- Main Title -->
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight leading-tight">
           Our Massage Services
         </h1>
-        <p class="font-accent text-base sm:text-lg text-[#B09CFF] mt-1.5 mb-3 font-normal">
+
+        <!-- Subtitle -->
+        <p class="font-accent text-xs sm:text-base text-[#8D75EA] mt-1 mb-2.5 font-normal tracking-wide">
           curated bodywork &amp; rejuvenation at your doorstep
         </p>
-        <p class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6">
+
+        <!-- Paragraph Description -->
+        <p class="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl mx-auto mb-4 sm:mb-6">
           Polite, trained male therapists arrive discretely at your home or hotel room anywhere in Kolkata with fresh linens, organic oils, and complete professional care.
         </p>
 
         <!-- Minimal Transparent Pricing Pill -->
-        <div class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 py-2 px-4 rounded-full bg-white border border-stone-200 shadow-xs text-xs sm:text-sm text-stone-700 font-medium">
-          <span class="text-stone-900 font-bold">Head &amp; Foot: <span class="text-brand">₹499 / ₹699</span></span>
+        <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 p-2.5 sm:py-2 sm:px-5 rounded-2xl sm:rounded-full bg-white border border-stone-200 shadow-xs text-xs sm:text-sm">
+          <!-- Pricing Tags Group -->
+          <div class="flex items-center gap-1.5 sm:gap-4 font-semibold text-stone-800">
+            <span class="inline-flex items-center gap-1 bg-stone-50 sm:bg-transparent px-2.5 py-1 sm:p-0 rounded-lg sm:rounded-none border border-stone-200/60 sm:border-0 text-xs sm:text-sm">
+              Head &amp; Foot: <span class="text-brand font-bold">₹499 / ₹699</span>
+            </span>
+            <span class="text-stone-300 hidden sm:inline">•</span>
+            <span class="inline-flex items-center gap-1 bg-stone-50 sm:bg-transparent px-2.5 py-1 sm:p-0 rounded-lg sm:rounded-none border border-stone-200/60 sm:border-0 text-xs sm:text-sm">
+              Body Therapies: <span class="text-brand font-bold">₹799 / ₹999</span>
+            </span>
+          </div>
+
           <span class="text-stone-300 hidden sm:inline">•</span>
-          <span class="text-stone-900 font-bold">Body Therapies: <span class="text-brand">₹799 / ₹999</span></span>
-          <span class="text-stone-300 hidden sm:inline">•</span>
-          <span class="text-emerald-700 font-semibold flex items-center gap-1">
-            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            Pay Post-Service • No Advance
-          </span>
+
+          <!-- Trust Badge -->
+          <div class="inline-flex items-center gap-1 text-[11px] sm:text-xs font-semibold text-emerald-700 bg-emerald-50 sm:bg-transparent px-2.5 py-0.5 sm:p-0 rounded-full">
+            <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <span>Pay Post-Service • No Advance</span>
+          </div>
         </div>
       </div>
     </section>
