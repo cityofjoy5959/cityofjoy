@@ -47,25 +47,39 @@
   #select-time-minute::-ms-expand {
     display: none;
   }
+
+  /* Sleek Modal Scrollbar on Mobile */
+  #booking-modal-card {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
+    -webkit-overflow-scrolling: touch;
+  }
+  #booking-modal-card::-webkit-scrollbar {
+    width: 4px;
+  }
+  #booking-modal-card::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.18);
+    border-radius: 9999px;
+  }
 </style>
 <div 
   id="booking-modal" 
-  class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-2.5 sm:p-4 transition-opacity duration-200 opacity-0 pointer-events-none"
+  class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 transition-opacity duration-200 opacity-0 pointer-events-none"
   role="dialog" 
   aria-modal="true" 
   aria-labelledby="booking-modal-title"
 >
   <div 
     id="booking-modal-card" 
-    class="bg-white w-full max-w-lg rounded-2xl p-4 sm:p-5 shadow-xl border border-stone-200 transform scale-95 transition-all duration-200 flex flex-col gap-3 max-h-[92vh] overflow-y-auto"
+    class="bg-white w-full max-w-lg rounded-2xl p-4 sm:p-5 shadow-xl border border-stone-200 transform scale-95 transition-all duration-200 flex flex-col gap-3 max-h-[90vh] max-h-[90dvh] overflow-y-auto"
   >
     <!-- Modal Header -->
     <div class="flex items-start justify-between gap-3 pb-2.5 border-b border-stone-100">
       <div>
-        <h3 id="booking-modal-title" class="text-lg sm:text-xl font-bold text-stone-900 tracking-tight">
+        <h3 id="booking-modal-title" class="text-base sm:text-lg font-bold text-stone-900 tracking-tight leading-tight">
           Book Your Session
         </h3>
-        <p id="booking-modal-subtitle" class="text-stone-500 text-xs mt-0.5">
+        <p id="booking-modal-subtitle" class="text-stone-500 text-[11px] sm:text-xs mt-0.5">
           Select therapy, duration, date/time, and your location in Kolkata
         </p>
       </div>
@@ -146,7 +160,7 @@
       <span class="block text-xs font-semibold text-stone-600 mb-1">
         Select Package Duration
       </span>
-      <div class="grid grid-cols-2 gap-2">
+      <div class="grid grid-cols-2 gap-2 mt-1.5">
         
         <!-- 60 Min Option -->
         <button 
@@ -157,7 +171,7 @@
         >
           <div class="flex items-center justify-between mb-0.5">
             <span class="text-xs sm:text-sm font-bold text-stone-900">60 Min</span>
-            <span class="text-[10px] text-stone-500 bg-stone-100 px-1.5 py-0.5 rounded">Standard</span>
+            <span class="text-[10px] text-stone-500 bg-stone-100 px-1.5 py-0.5 rounded font-medium">Standard</span>
           </div>
           <div id="duration-price-60" class="text-base sm:text-lg font-bold text-stone-900">₹799</div>
         </button>
@@ -169,7 +183,7 @@
           data-duration-select="90" 
           class="duration-select-btn text-left p-2.5 sm:p-3 rounded-xl border transition-all cursor-pointer border-brand bg-rose-50/50 relative hover:border-brand"
         >
-          <span class="absolute -top-2 right-2.5 text-[9px] font-bold uppercase tracking-wider text-white bg-brand px-1.5 py-0.5 rounded">
+          <span class="absolute -top-2.5 right-2 text-[9px] font-extrabold uppercase tracking-wider text-white bg-brand px-2 py-0.5 rounded-full shadow-2xs">
             Best Value
           </span>
           <div class="flex items-center justify-between mb-0.5">
@@ -184,7 +198,7 @@
 
     <!-- 3. Preferred Date & Time (Minimal 12-Hour Setup Clock) -->
     <div>
-      <div class="flex items-center justify-between mb-1">
+      <div class="flex items-center justify-between mb-1 gap-2">
         <span class="block text-xs font-semibold text-stone-600">
           Preferred Date &amp; Time
         </span>
@@ -199,7 +213,7 @@
         </button>
       </div>
 
-      <div class="grid grid-cols-2 gap-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         <!-- Date Input -->
         <div>
           <input 
@@ -292,8 +306,8 @@
       </div>
 
       <!-- Minimal 'Now' Arrival Note -->
-      <p class="text-[11px] text-stone-500 mt-1.5 leading-tight flex items-center gap-1.5 font-medium">
-        <span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></span>
+      <p class="text-[11px] text-stone-500 mt-1.5 leading-relaxed flex items-start gap-1.5 font-medium">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand shrink-0 mt-1"></span>
         <span><strong>'Now'</strong> means therapist arrives at your doorstep within ~60 mins.</span>
       </p>
     </div>
@@ -310,7 +324,7 @@
           type="button" 
           id="btn-loc-home" 
           data-loc-select="Home" 
-          class="location-select-btn py-1.5 px-3 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-white text-stone-900 shadow-2xs"
+          class="location-select-btn py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-white text-stone-900 shadow-2xs text-center"
         >
           Home Doorstep
         </button>
@@ -319,7 +333,7 @@
           type="button" 
           id="btn-loc-hotel" 
           data-loc-select="Hotel" 
-          class="location-select-btn py-1.5 px-3 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer text-stone-600 hover:text-stone-900"
+          class="location-select-btn py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer text-stone-600 hover:text-stone-900 text-center"
         >
           Hotel Room
         </button>
@@ -330,8 +344,8 @@
         <input 
           type="text" 
           id="input-home-address" 
-          placeholder="Enter area or landmark (e.g. Salt Lake, Ballygunge, New Town...)" 
-          class="w-full px-3.5 py-2 rounded-xl border border-stone-200 focus:border-brand focus:ring-1 focus:ring-brand text-xs sm:text-sm bg-white placeholder:text-stone-400 text-stone-800 transition-all font-medium"
+          placeholder="Area or landmark (e.g. Salt Lake, Ballygunge...)" 
+          class="w-full h-10 px-3.5 rounded-xl border border-stone-200 focus:border-brand focus:ring-1 focus:ring-brand text-xs sm:text-sm bg-white placeholder:text-stone-400 text-stone-800 transition-all font-medium"
         />
       </div>
 
@@ -342,7 +356,7 @@
           id="custom-hotel-trigger" 
           aria-haspopup="listbox" 
           aria-expanded="false"
-          class="w-full px-3.5 py-2 rounded-xl border border-stone-200 bg-white text-stone-800 text-xs sm:text-sm font-medium flex items-center justify-between hover:border-stone-300 focus:outline-none transition-all cursor-pointer text-left"
+          class="w-full h-10 px-3.5 rounded-xl border border-stone-200 bg-white text-stone-800 text-xs sm:text-sm font-medium flex items-center justify-between hover:border-stone-300 focus:outline-none transition-all cursor-pointer text-left"
         >
           <div class="flex items-center gap-2 min-w-0 pr-2">
             <span class="w-2 h-2 rounded-full bg-brand shrink-0"></span>
