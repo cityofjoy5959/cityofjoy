@@ -169,11 +169,8 @@
                 <button type="button"
                   data-book-service="Deep Tissue Massage"
                   data-book-duration="90"
-                  class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] group/btn cursor-pointer">
+                  class="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] cursor-pointer">
                   <span>Book Appointment</span>
-                  <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
                 </button>
               </div>
             </div>
@@ -232,11 +229,8 @@
                 <button type="button"
                   data-book-service="Head & Foot Massage"
                   data-book-duration="90"
-                  class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] group/btn cursor-pointer">
+                  class="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] cursor-pointer">
                   <span>Book Appointment</span>
-                  <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
                 </button>
               </div>
             </div>
@@ -295,11 +289,8 @@
                 <button type="button"
                   data-book-service="Body Scrubbing"
                   data-book-duration="90"
-                  class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] group/btn cursor-pointer">
+                  class="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] cursor-pointer">
                   <span>Book Appointment</span>
-                  <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
                 </button>
               </div>
             </div>
@@ -358,11 +349,8 @@
                 <button type="button"
                   data-book-service="Men's Wellness Therapy"
                   data-book-duration="90"
-                  class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] group/btn cursor-pointer">
+                  class="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-xl bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] cursor-pointer">
                   <span>Book Appointment</span>
-                  <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
                 </button>
               </div>
             </div>
@@ -524,9 +512,8 @@
 
               <a
                 href="/about"
-                class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-700 hover:text-brand transition-colors">
+                class="inline-flex items-center text-xs sm:text-sm font-semibold text-slate-700 hover:text-brand transition-colors">
                 <span>Learn More About Us</span>
-                <span>→</span>
               </a>
             </div>
 

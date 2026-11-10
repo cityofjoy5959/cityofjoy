@@ -405,10 +405,9 @@
       <button 
         id="confirm-whatsapp-booking-btn" 
         type="button" 
-        class="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] group cursor-pointer"
+        class="w-full inline-flex items-center justify-center py-3 px-5 rounded-full bg-brand text-white font-bold text-sm sm:text-base hover:bg-brand-hover shadow-xs hover:shadow-md transition-all active:scale-[0.99] cursor-pointer"
       >
         <span id="confirm-btn-text">Book on WhatsApp (₹999)</span>
-        <span class="group-hover:translate-x-0.5 transition-transform">→</span>
       </button>
 
       <!-- Dynamic Friendly Validation Prompt -->
